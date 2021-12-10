@@ -8,10 +8,22 @@
 
 import random
 
-first = int(input("Enter your First number: "))
-second = int(input("Enter your Second number: "))
-third = int(input("Enter your Third number: "))
+lottery = True
+while lottery:
+    first = int(input("Enter your First number: "))
+    second = int(input("Enter your Second number: "))
+    third = int(input("Enter your Third number: "))
 
-one = random.randint(0,9)
-two = random.randint(0,9)
-three = random.randint(0,9)
+    one = random.randint(0,9)
+    two = random.randint(0,9)
+    three = random.randint(0,9)
+    
+    user_number = first, second, third
+    random_number = (one, two, three)
+    if  user_number == one and two and three:
+        print(f"CONGRATULATIONS! YOU WIN THE LOTTERY!")
+        print(random_number)
+    else:
+        print(f"Winning Numbers: {random_number}")        
+        print(f"Your Numbers: {user_number}")
+        print(f"BETTER LUCK NEXT TIME! YOU LOSS THE LOTTERY!")
