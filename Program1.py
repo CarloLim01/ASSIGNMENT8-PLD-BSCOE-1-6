@@ -20,6 +20,7 @@ while lottery:
     
     user_number = first, second, third
     random_number = (one, two, three)
+
     if  user_number == one and two and three:
         print(f"CONGRATULATIONS! YOU WIN THE LOTTERY!")
         print(random_number)
@@ -27,3 +28,12 @@ while lottery:
         print(f"Winning Numbers: {random_number}")        
         print(f"Your Numbers: {user_number}")
         print(f"BETTER LUCK NEXT TIME! YOU LOSS THE LOTTERY!")
+
+    user_answer = input("ENTER 'yes' TO PLAY AGAIN AND 'no' TO EXIT THE GAME: ").lower()
+    while True:
+        if user_answer == "yes":
+            lottery = True
+            break
+        elif user_answer == "no":
+            lottery = False
+            break
