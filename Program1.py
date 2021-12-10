@@ -6,6 +6,12 @@
 #If the user enter “y” the user will lottery again
 #if “n” the program will exit.
 
+import random
+
 first = int(input("Enter your First number: "))
 second = int(input("Enter your Second number: "))
 third = int(input("Enter your Third number: "))
+
+one = random.randint(0,9)
+two = random.randint(0,9)
+three = random.randint(0,9)
