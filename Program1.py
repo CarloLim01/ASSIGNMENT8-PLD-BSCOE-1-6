@@ -7,14 +7,19 @@
 #if “n” the program will exit.
 
 import random
+import time 
 
 print("LOTTERY")
+time.sleep(1)
 print("WELCOME TO LOTTERY GAME!")
 
+time.sleep(2)
 name = input("Enter your name: ")
 print(f"HI {name}, GUESS A THREE NUMBER BETWEEN 0 - 9 TO WIN!")
+time.sleep(2)
 print(f"{name}, GET READY TO GUESS!")
 
+time.sleep(3)
 lottery = True
 while lottery:
     first = int(input("Enter your First number: "))
@@ -27,6 +32,7 @@ while lottery:
     
     user_number = first, second, third
     random_number = (one, two, three)
+    time.sleep(2)
     if  user_number == one and two and three:
         print(f"CONGRATULATIONS {name}! YOU WIN THE LOTTERY!")
         print(random_number)
@@ -35,7 +41,8 @@ while lottery:
         print(f"Your Numbers: {user_number}")
         print(f"BETTER LUCK NEXT TIME {name}! YOU LOSS THE LOTTERY!")
 
-    user_answer = input(f"ENTER 'yes' TO PLAY AGAIN AND 'no'TO EXIT THE GAME: ").lower()
+    time.sleep(3)
+    user_answer = input(f"ENTER 'yes' TO PLAY AGAIN AND 'no' TO EXIT THE GAME: ").lower()
     while True:
         if user_answer == "yes":
             lottery = True
