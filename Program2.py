@@ -7,42 +7,43 @@
 import random
 import time
 
-print("GUESS THE NUMBER")
+print("\033[1;37;1mGUESS THE NUMBER\033[0m")
 time.sleep(1)
-print("WELCOME TO GUESS A NUMBER GAME!")
+print("\n\033[1;35;1mWELCOME TO GUESS A NUMBER GAME!\033[0m")
 
 time.sleep(2)
-name = input("Enter your name: ")
-print(f"HI {name}, GUESS A NUMBER BETWEEN 0 - 100 TO WIN!")
+name = input("\n\33[1;32;1mEnter your name:\33[0m ")
+print(f"\n\033[1;35;1mHI \033[1;37;1m{name}\033[0m, \033[1;35;1mGUESS A NUMBER BETWEEN 0 - 100 TO WIN!\033[0m")
 time.sleep(2)
-print(f"{name}, GET READY TO GUESS!")
+print(f"\n\033[1;37;1m{name},\033[0m \033[1;35;1mGET READY TO GUESS!\033[0m")
 
 time.sleep(3)
-user_number = int(input("Your Guess Number: "))
+user_number = int(input("\n\033[1;33;3mYour Guess Number:\33[0m "))
 random_number = random.randint(0,100)
 
 while random_number != user_number:
     if user_number < random_number:
         time.sleep(1)
-        print("Guess Greater Than Your Input Number.")
+        print("\n\033[1;31;3mGuess Greater Than Your Input Number.\33[0m")
         time.sleep(1)
-        user_number = int(input("Enter Again Your Guess Number: "))
+        user_number = int(input("\n\033[1;33;3mEnter Again Your Guess Number:\33[0m "))
         if user_number == random_number:
             time.sleep(2)
-            print(f"RANDOM NUMBER: {random_number}")
+            print(f"\n\033[1;34;1mRANDOM NUMBER:\033[0m \033[1;37;1m{random_number}\033[0m")
             time.sleep(2)
-            print(f"CONGRATULATIONS {name}! YOU GUESS THE CORRECT NUMBER!")
+            print(f"\n\033[1;34;1mCONGRATULATIONS \033[1;37;1m{name}\033[0m! \033[1;34;1mYOU GUESS THE CORRECT NUMBER!\033[0m")
             break
     elif user_number > random_number:
         time.sleep(1)
-        print("Guess Less Than Your Input Number.")
+        print("\n\033[1;31;3mGuess Less Than Your Input Number.\33[0m")
         time.sleep(1)
-        user_number = int(input("Enter Again Your Guess Number: "))
+        user_number = int(input("\n\033[1;33;3mEnter Again Your Guess Number:\33[0m "))
         time.sleep(2)
         if user_number == random_number:
-            print(f"RANDOM NUMBER: {random_number}")
+            print(f"\n\033[1;34;1mRANDOM NUMBER:\033[0m \033[1;37;1m{random_number}\033[0m")
             time.sleep(2)
-            print(f"CONGRATULATIONS {name}! YOU GUESS THE CORRECT NUMBER!")
+            print(f"\n\033[1;34;1mCONGRATULATIONS \033[1;37;1m{name}\033[0m! \033[1;34;1mYOU GUESS THE CORRECT NUMBER!\033[0m")
             break
-
-print("-THANK YOU FOR PLAYING GUESS THE NUMBER-")
+        
+time.sleep(2)
+print("\n\033[1;37;1m-THANK YOU FOR PLAYING GUESS THE NUMBER-\033[0m")
